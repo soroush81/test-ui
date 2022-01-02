@@ -1,4 +1,3 @@
-import axios from 'axios'
 import http from './httpService'
 
 const apiEndPoint = "/game/";
@@ -7,11 +6,10 @@ function gameUrl(gameId, pitId) {
     return `${apiEndPoint}${gameId}/pit/${pitId}`
 }
 export async function createGame() {
-    const { data } = await axios.post('http://localhost:8080/game/');
-    console.log(data)
+    const { data } = await http.post(apiEndPoint);
     return data;
 }
 
 export async function play(gameId, pitId) {
-    return await axios.put(`http://localhost:8080/game/${gameId}/pit/${pitId}`)
+    return await http.put(gameUrl(gameId, pitId))
 }

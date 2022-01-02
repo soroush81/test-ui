@@ -1,7 +1,7 @@
 import React from 'react'
 import Board from './Board'
 import { createGame, play } from '../services'
-
+import { toast } from "react-toastify";
 const Game = () => {
     const [game, setGame] = React.useState()
     const [currentPlayer, setCurrentPlayer] = React.useState(null);
@@ -16,11 +16,16 @@ const Game = () => {
     }
 
     const playHandler = async (gameId, pitId) => {
-        const { data } = await play(gameId, pitId);
-        const { currentPlayer, winner } = data;
-        setGame(data)
-        setCurrentPlayer(currentPlayer)
-        setWinner(winner)
+        try {
+            const { data } = await play(gameId, pitId);
+            const { currentPlayer, winner } = data;
+            setGame(data)
+            setCurrentPlayer(currentPlayer)
+            setWinner(winner)
+        } catch (ex) {
+            if (ex.response && ex.response.data.detail)
+                toast.error(ex.response.data.detail);
+        }
     }
 
     return (
