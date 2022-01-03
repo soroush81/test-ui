@@ -1,9 +1,47 @@
 import { makeStyles } from '@material-ui/styles'
 
 export const useStyles = makeStyles((theme) => ({
-    player2pit: { boraderWidth: 1, borderStyle: 'solid', borderColor: 'blue', borderRadius: '50%', width: 25, height: 25, position: 'absolute', top: 0 },
-    player1pit: { boraderWidth: 1, borderStyle: 'solid', borderColor: 'green', borderRadius: '50%', width: 25, height: 25, position: 'absolute', top: 100 },
-    player1kalaha: { boraderWidth: 1, borderStyle: 'solid', borderColor: 'red', borderRadius: '50%', width: 35, height: 35, position: 'absolute', top: 50, left: 0 },
-    player2kalaha: { boraderWidth: 1, borderStyle: 'solid', borderColor: 'red', borderRadius: '50%', width: 35, height: 35, position: 'absolute', top: 50, left: 10 },
-    board: { position: 'relative' }
+  pit: {
+    boraderWidth: 1,
+    borderStyle: 'solid',
+    borderRadius: '50%',
+    width: 25,
+    height: 25,
+  },
+  player2pit: {
+    borderColor: 'blue',
+  },
+  player1pit: {
+    borderColor: 'green',
+  },
+  kalahas: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+  },
+  kalaha: {
+    boraderWidth: 1,
+    borderStyle: 'solid',
+    borderRadius: '50%',
+    width: 35,
+    height: 35,
+  },
+  player2kalaha: {
+    borderColor: 'red',
+  },
+  player1kalaha: {
+    borderColor: 'red',
+  },
+  board: {
+    position: 'relative',
+    width: 400,
+    height: 200,
+  },
+  boardside: {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto auto auto auto auto',
+    gridGap: '10',
+    padding: '10',
+    margin: 25,
+  },
 }))
