@@ -3,7 +3,6 @@ import { useStyles } from './styles'
 
 const Pit = ({ gameId, pit, onPlay }) => {
   const classes = useStyles()
-
   const [key, value] = pit
 
   const getPitStyles = () => {

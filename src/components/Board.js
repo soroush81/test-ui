@@ -13,13 +13,11 @@ const Board = ({ game, onPlay }) => {
       .filter(([key]) => key > 7 && key < 14)
       .reverse()
   }
+
   return (
-    <div
-      className={classes.board}
-      style={{ alignItems: 'center', justifyContent: 'center' }}
-    >
+    <>
       {game != null && game.status !== undefined && (
-        <>
+        <div className={classes.board}>
           <div className={classes.boardside}>
             <BoardSide
               boardSide={getPlayer2Pits()}
@@ -46,9 +44,9 @@ const Board = ({ game, onPlay }) => {
               onPlay={onPlay}
             />
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   )
 }
 
