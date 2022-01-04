@@ -10,7 +10,7 @@ const BoardStatus = ({ status, onNewGame }) => {
       <button className={classes.button} onClick={onNewGame}>
         New Game
       </button>
-      {currentPlayer !== null && <div>Current Player:{currentPlayer}</div>}
+      <div>{currentPlayer}</div>
       {winner !== null && <div> Winner:{winner}</div>}
     </div>
   )
