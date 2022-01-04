@@ -13,9 +13,9 @@ const Kalaha = ({ gameId, pit, onPlay }) => {
 
   return (
     <>
-      <div onClick={() => onPlay(gameId, key)} className={getPitStyles()}>
+      <div onClick={() => onPlay(gameId, key)} className={classes.kalaha}>
         {value}
-        <div style={{ margin: 15 }}>{key}</div>
+        <div className={classes.pitLabel}>{key}</div>
       </div>
     </>
   )

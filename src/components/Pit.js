@@ -19,7 +19,7 @@ const Pit = ({ gameId, pit, onPlay }) => {
     <>
       <div onClick={() => onPlay(gameId, key)} className={getPitStyles()}>
         {value}
-        <div style={{ margin: 5 }}>{key}</div>
+        <div className={classes.pitLabel}>{key}</div>
       </div>
     </>
   )

@@ -25,7 +25,7 @@ const Board = ({ game, onPlay }) => {
               onPlay={onPlay}
             />
           </div>
-          <div className={classes.kalahas}>
+          <div className={classes.kalahaContainer}>
             <Kalaha
               gameId={game.id}
               pit={[14, game.status[14]]}

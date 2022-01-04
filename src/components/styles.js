@@ -10,33 +10,50 @@ export const useStyles = makeStyles((theme) => ({
   },
   board: {
     position: 'relative',
-    width: 400,
+    width: 450,
     height: 200,
-    flex: 3,
+    borderStyle: 'inset',
+    borderColor: 'lightgray',
+    borderWidth: 1,
+    borderRadius: 20,
+    backgroundColor: '#f4dfba',
+    padding: 5
   },
   boardside: {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto auto auto auto',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     gridGap: '10',
     padding: '10',
     margin: 25,
     flex: 1,
   },
   boardstatus: {
-    marginTop: 30,
+    marginTop: 20,
+  },
+  borderStatusText: {
+    fontStyle: 'italic',
+    textTransform: 'lowercase'
   },
   pit: {
     borderWidth: 2,
     borderStyle: 'solid',
     borderRadius: '50%',
-    width: 25,
-    height: 25,
+    width: 30,
+    height: 30,
   },
   player2pit: {
-    borderColor: 'blue',
+    backgroundColor: '#ff5959',
+    borderColor: '#ff5959',
   },
   player1pit: {
-    borderColor: 'green',
+    backgroundColor: '#676fa3',
+    borderColor: '#676fa3',
+  },
+  pitLabel: {
+    marginTop: 15,
+    fontSize: '0.6em'
   },
   kalaha: {
     borderWidth: 2,
@@ -44,28 +61,25 @@ export const useStyles = makeStyles((theme) => ({
     borderRadius: '50%',
     width: 35,
     height: 35,
+    borderColor: '#ffc900',
+    backgroundColor: '#ffc900',
   },
-  player2kalaha: {
-    borderColor: 'red',
-  },
-  player1kalaha: {
-    borderColor: 'red',
-  },
-  kalahas: {
+  kalahaContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
   },
   button: {
-    backgroundColor: '#04AA6D',
-    border: 'none',
-    color: 'white',
+    backgroundColor: '#f0bb62',
+    border: 'outset',
+    borderWidth: 1,
+    color: 'black',
     padding: '15px',
     textAlign: 'center',
     textDecoration: 'none',
     display: 'inline-block',
-    fontSize: '16px',
-    margin: '4px 2px',
-    borderRadius: '2px',
+    fontSize: '12px',
+    margin: '10px 2px',
+    borderRadius: '4px',
   },
 }))

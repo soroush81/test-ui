@@ -40,11 +40,14 @@ const Game = () => {
 
   return (
     <div className={classes.game}>
+      <button className={classes.button} onClick={newGameHandler}>
+        New Game
+      </button>
+      <Board game={game} onPlay={playHandler} />
       <BoardStatus
         status={[currentPlayer, winner]}
         onNewGame={newGameHandler}
       />
-      <Board game={game} onPlay={playHandler} />
     </div>
   )
 }
