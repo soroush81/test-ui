@@ -7,8 +7,17 @@ const BoardStatus = ({ status }) => {
 
   return (
     <div className={classes.boardstatus}>
-      {currentPlayer != null && <div className={classes.borderStatusText}>{currentPlayer.replace('_', ' ')}</div>}
-      {winner !== null && <div className={classes.borderStatusText}> Winner:{winner.replace('_', ' ')}</div>}
+      {currentPlayer != null && (
+        <div className={classes.borderStatusText}>
+          {currentPlayer.replace('_', ' ')}
+        </div>
+      )}
+      {winner !== null && (
+        <div className={classes.borderStatusText}>
+          {' '}
+          Winner:{winner.replace('_', ' ')}
+        </div>
+      )}
     </div>
   )
 }
