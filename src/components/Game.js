@@ -25,6 +25,7 @@ const Game = () => {
     try {
       const { data } = await play(gameId, pitId)
       setGameData(data)
+      return true
     } catch (ex) {
       if (ex.response && ex.response.data.message)
         toast.error(ex.response.data.message)

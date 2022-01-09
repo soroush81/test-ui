@@ -15,8 +15,9 @@ const Pit = ({ gameId, pit, onPlay }) => {
       : [classes.pit, classes.player2pit].join(' ')
   }
 
-  const pitClickHandler = (e) => {
-    e.preventDefault()
+  const pitClickHandler = (event) => {
+    event.preventDefault()
+    event.stopPropagation()
     onPlay(gameId, key)
   }
 
@@ -31,3 +32,4 @@ const Pit = ({ gameId, pit, onPlay }) => {
 }
 
 export default Pit
+//
