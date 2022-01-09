@@ -17,9 +17,6 @@ const Pit = ({ gameId, pit, onPlay }) => {
 
   const pitClickHandler = (e) => {
     e.preventDefault()
-    console.log(submitted)
-    if (submitted) return false
-    var submitted = true
     onPlay(gameId, key)
   }
 
