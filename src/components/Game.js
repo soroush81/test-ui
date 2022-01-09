@@ -16,8 +16,8 @@ const Game = () => {
       const createdGame = await createGame()
       setGameData(createdGame)
     } catch (ex) {
-      if (ex.response && ex.response.data.detail)
-        toast.error(ex.response.data.detail)
+      if (ex.response && ex.response.data.message)
+        toast.error(ex.response.data.message)
     }
   }
 
@@ -26,8 +26,8 @@ const Game = () => {
       const { data } = await play(gameId, pitId)
       setGameData(data)
     } catch (ex) {
-      if (ex.response && ex.response.data.detail)
-        toast.error(ex.response.data.detail)
+      if (ex.response && ex.response.data.message)
+        toast.error(ex.response.data.message)
     }
   }
 

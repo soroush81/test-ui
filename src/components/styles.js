@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme) => ({
     borderWidth: 1,
     borderRadius: 20,
     backgroundColor: '#f4dfba',
-    padding: 5
+    padding: 5,
   },
   boardside: {
     display: 'grid',
@@ -34,7 +34,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   borderStatusText: {
     fontStyle: 'italic',
-    textTransform: 'lowercase'
+    textTransform: 'lowercase',
   },
   pit: {
     borderWidth: 2,
@@ -53,7 +53,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   pitLabel: {
     marginTop: 15,
-    fontSize: '0.6em'
+    fontSize: '0.6em',
   },
   kalaha: {
     borderWidth: 2,
